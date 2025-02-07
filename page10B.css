@@ -1,0 +1,46 @@
+/* ✅ Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Per memory */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    touch-action: manipulation; /* Ensures proper touch behavior */
+}
+
+/* ✅ SVG Display */
+#pageSvg {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+/* ✅ Camera Feed (Corrected Visibility & Positioning) */
+#cameraFeed {
+    position: fixed;
+    visibility: visible;
+    object-fit: contain;
+    z-index: 10;
+}
+
+/* ✅ Flash Effect */
+#flashEffect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transition: opacity 0.1s ease-in-out;
+}
+
+/* ✅ Hide Cursor for Touchscreen */
+body, #pageSvg, #cameraFeed {
+    cursor: none;
+}
